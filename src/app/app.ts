@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { DevBadge } from 'colibrihub-shared-components';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, DevBadge],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
