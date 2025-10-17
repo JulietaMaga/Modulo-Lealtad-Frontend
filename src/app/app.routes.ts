@@ -5,14 +5,10 @@ import { NivelForm } from './features/components/nivel-form/nivel-form';
 
 export const routes: Routes = [
     { path: '', component: Home, pathMatch: 'full' },
-    {path: 'formulario-multiplicador', component: MultiplierForm},
-    { path: '**', redirectTo: 'home' },
-
-    {path: '', component: Home, pathMatch: 'full'},
-    {path: 'formulario-nivel', component: NivelForm},
-    { path: '**', redirectTo: 'home' }
-
-    
+    { path: 'formulario-multiplicador', component: MultiplierForm },
+    { path: 'formulario-nivel', component: NivelForm },
+    // Wildcard should redirect to the root (Home) which exists as ''.
+    { path: '**', redirectTo: '' },
 ];
 
 
