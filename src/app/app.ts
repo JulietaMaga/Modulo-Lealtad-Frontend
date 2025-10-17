@@ -1,20 +1,39 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, isDevMode, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { DevBadge } from 'colibrihub-shared-components';
+import { Auth, DevBadge } from 'colibrihub-shared-components';
+import { Menu } from "./shared/components/menu/menu";
+import { ValidationService } from 'colibrihub-shared-services';
+import { UserDto } from 'colibrihub-shared-dtos';
+import { environment } from '../environments/environment.development';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, DevBadge],
+  imports: [RouterOutlet, DevBadge, Auth, Menu],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App  implements OnInit {
+  protected readonly title = signal('ModuloLealtad');
+  private readonly validationService = inject(ValidationService);
+
   ngOnInit(): void {
     this.initializeSidebarToggle();
+
+    // validar inicio de sesión
+    this.validationService.validate().subscribe({
+      next: (user: UserDto) => {
+        console.log('Usuario autenticado:', user.username);
+      }
+      , error: (err) => {
+        if (isDevMode() == false) {
+          const loginUrl = environment.loginUrl + '?redirect=' + encodeURIComponent(window.location.href);
+          window.location.href = loginUrl;
+        }
+      }
+    });
   }
-  protected readonly title = signal('ModuloLealtad');
+  
 
   // Se recomienda ejecutar este código una vez que el DOM esté completamente cargado.
 // Si lo pones en el ngOnInit de un componente de Angular, asegúrate de que
