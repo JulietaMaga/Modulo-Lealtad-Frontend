@@ -13,17 +13,73 @@
     >
       <span class="text-gray-100 hover:text-white">🏠 Clientes Lealtad</span>
     </a>
+
     <a
       routerLink="/formulario-multiplicador"
       class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-decoration-none"
     >
-      <span class="text-gray-100 hover:text-white">🧮 Progama Lealtad</span>
+      <span class="text-gray-100 hover:text-white">🧮 Programa Lealtad</span>
     </a>
+
     <a
       routerLink="/formulario-nivel"
       class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 text-decoration-none"
     >
       <span class="text-gray-100 hover:text-white">🥇 Niveles</span>
     </a>
+
+    <!-- Botón de cerrar sesión -->
+    <div class="px-2">
+    <button
+      type="button"
+      class="btn w-100 mb-2"
+      style="background-color: #9333ea; color: white; margin-top: 350px;"
+      data-bs-toggle="modal"
+      data-bs-target="#logoutModal">
+      🔒 Cerrar sesión
+    </button>
+  </div>
   </nav>
 </aside>
+
+<!-- Modal fuera del aside -->
+<div
+  class="modal fade"
+  id="logoutModal"
+  tabindex="-1"
+  aria-labelledby="logoutModalLabel"
+  aria-hidden="true"
+  data-bs-backdrop="false"
+  data-bs-keyboard="true">
+  <div class="modal-dialog" style="margin-top: 200px;"> <!-- 👈 controla qué tan abajo aparece -->
+    <div class="modal-content border-0 shadow rounded-3">
+      <div class="modal-header text-white" style="background-color: #9333ea;">
+        <h5 class="modal-title" id="logoutModalLabel">Cerrar sesión</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <p>¿Estás seguro de que deseas cerrar sesión?</p>
+        <div class="d-flex justify-content-center gap-2 mt-3">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal">
+            Cancelar
+          </button>
+          <button
+            type="button"
+            class="btn"
+            style="background-color: #9333ea; color: white;"
+            (click)="logout()">
+            Sí, salir
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
