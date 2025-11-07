@@ -7,8 +7,8 @@
       <th scope="col">Fecha Inicio</th>
       <th scope="col">Fecha Fin</th>
       <th scope="col">Nivel</th>
-      <th scope="col">Puntos</th>
-      <th scope="col">Recompensa</th>
+      <th scope="col">Puntos Requeridos</th>
+      <th scope="col">Multiplicador</th>
       <th scope="col"></th>
     </tr>
   </thead>
@@ -19,7 +19,23 @@
       <td>Bronce</td>
       <td>200</td>
       <td>0.5</td>
-      <td><a class="cursor-pointer">Select</a></td>
+      <td><a class="cursor-pointer" style="color: #9333ea;">Select</a></td>
+    </tr>
+    <tr>
+      <td>13/10/2025</td>
+      <td>14/10/2026</td>
+      <td>Plata</td>
+      <td>500</td>
+      <td>1</td>
+      <td><a class="cursor-pointer" style="color: #9333ea;">Select</a></td>
+    </tr>
+    <tr>
+      <td>13/10/2025</td>
+      <td>14/10/2026</td>
+      <td>Oro</td>
+      <td>800</td>
+      <td>1.5</td>
+      <td><a class="cursor-pointer" style="color: #9333ea;">Select</a></td>
     </tr>
   </tbody>
 </table>
@@ -45,18 +61,18 @@
 </section>
 <section class="flex gap-3 w-full">
 <div class="mb-3 w-full">
-  <label for="exampleFormControlInput1" class="form-label">Puntos</label>
+  <label for="exampleFormControlInput1" class="form-label">Puntos Requeridos</label>
   <input type="number" class="form-control" id="exampleFormControlInpu21" placeholder="Ingresa el numero de puntos">
 </div>
 </section>
 <section class="flex gap-4 w-full">
 <div class="mb-10 w-full">
-  <label for="exampleFormControlInput1" class="form-label">Recompensa</label>
-  <input type="number" class="form-control" id="exampleFormControlInpu21" placeholder="Ingrese la recompensa">
+  <label for="exampleFormControlInput1" class="form-label">Multiplicador Extra</label>
+  <input type="number" class="form-control" id="exampleFormControlInpu21" placeholder="Ingrese el multiplicador">
 </div>
 </section>
 <div class="mb-10">
-<button type="button" class="btn btn-dark">Guardar</button>  
+<button type="button" class="btn" style="background-color: #9333ea !important; color: white;">Guardar</button>  
 </div>
 </div>  
 </section>
