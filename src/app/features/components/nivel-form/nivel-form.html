@@ -1,78 +1,77 @@
 <h1>Niveles</h1>
-<section class= "flex flex-row-reverse justify-between mx-10">
+
+<section class="flex flex-row-reverse justify-between mx-10">
   <section>
     <table class="table">
-  <thead class="table-light">
-    <tr>
-      <th scope="col">Fecha Inicio</th>
-      <th scope="col">Fecha Fin</th>
-      <th scope="col">Nivel</th>
-      <th scope="col">Puntos Requeridos</th>
-      <th scope="col">Multiplicador</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>13/10/2025</td>
-      <td>14/10/2026</td>
-      <td>Bronce</td>
-      <td>200</td>
-      <td>0.5</td>
-      <td><a class="cursor-pointer" style="color: #9333ea;">Select</a></td>
-    </tr>
-    <tr>
-      <td>13/10/2025</td>
-      <td>14/10/2026</td>
-      <td>Plata</td>
-      <td>500</td>
-      <td>1</td>
-      <td><a class="cursor-pointer" style="color: #9333ea;">Select</a></td>
-    </tr>
-    <tr>
-      <td>13/10/2025</td>
-      <td>14/10/2026</td>
-      <td>Oro</td>
-      <td>800</td>
-      <td>1.5</td>
-      <td><a class="cursor-pointer" style="color: #9333ea;">Select</a></td>
-    </tr>
-  </tbody>
-</table>
+      <thead class="table-light">
+        <tr>
+          <th scope="col">Nombre de Nivel</th>
+          <th scope="col">Puntos Requeridos</th>
+          <th scope="col">Multiplicador</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Bronce</td>
+          <td>200</td>
+          <td>0.5</td>
+          <td><a class="cursor-pointer" style="color: #9333ea;">Select</a></td>
+        </tr>
+        <tr>
+          <td>Plata</td>
+          <td>500</td>
+          <td>1</td>
+          <td><a class="cursor-pointer" style="color: #9333ea;">Select</a></td>
+        </tr>
+        <tr>
+          <td>Oro</td>
+          <td>800</td>
+          <td>1.5</td>
+          <td><a class="cursor-pointer" style="color: #9333ea;">Select</a></td>
+        </tr>
+      </tbody>
+    </table>
   </section>
-    <div class="lg:w-[40%] flex justify-center flex-col">
-      <section class="flex gap-4 w-full">
-        <div class= "w-full">
-          <div class="mb-1 w-full">
-  <label for="exampleFormControlInput1" class="form-label">Fecha de inicio</label>
-  <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Fecha de inicio">
+
+  <div class="lg:w-[40%] flex justify-center flex-col">
+    <section class="flex gap-4 w-full">
+      <!-- Si deseas reactivar estas fechas, quita el comentario correctamente -->
+      <!--
+      <div class="mb-1 w-full">
+        <label for="fechaInicio" class="form-label">Fecha de inicio</label>
+        <input type="date" class="form-control" id="fechaInicio" placeholder="Fecha de inicio">
+      </div>
+      <div class="mb-3 w-full">
+        <label for="fechaFin" class="form-label">Fecha fin</label>
+        <input type="date" class="form-control" id="fechaFin" placeholder="Fecha fin">
+      </div>
+      -->
+    </section>
+
+    <section class="flex gap-3 w-full">
+      <div class="mb-3 w-full">
+        <label for="nivel" class="form-label">Nombre de Nivel</label>
+        <input type="text" class="form-control" id="nivel" placeholder="Ingresa Nombre de Nivel">
+      </div>
+    </section>
+
+    <section class="flex gap-3 w-full">
+      <div class="mb-3 w-full">
+        <label for="puntos" class="form-label">Puntos Requeridos</label>
+        <input type="number" class="form-control" id="puntos" placeholder="Ingresa el número de puntos">
+      </div>
+    </section>
+
+    <section class="flex gap-4 w-full">
+      <div class="mb-10 w-full">
+        <label for="multiplicador" class="form-label">Multiplicador Extra</label>
+        <input type="number" class="form-control" id="multiplicador" placeholder="Ingrese el multiplicador">
+      </div>
+    </section>
+
+    <div class="mb-10">
+      <button type="button" class="btn" style="background-color: #9333ea !important; color: white;">Guardar</button>
+    </div>
   </div>
-</div>
-<div class="mb-3 w-full">
-  <label for="exampleFormControlInput1" class="form-label">Fecha fin</label>
-    <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Fecha fin">
-</div>
-</section>
-<section class="flex gap-3 w-full">
-<div class="mb-3 w-full">
-  <label for="exampleFormControlInput1" class="form-label">Nivel</label>
-  <input type="text" class="form-control" id="exampleFormControlInpu21" placeholder="Ingresa Nivel">
-</div>
-</section>
-<section class="flex gap-3 w-full">
-<div class="mb-3 w-full">
-  <label for="exampleFormControlInput1" class="form-label">Puntos Requeridos</label>
-  <input type="number" class="form-control" id="exampleFormControlInpu21" placeholder="Ingresa el numero de puntos">
-</div>
-</section>
-<section class="flex gap-4 w-full">
-<div class="mb-10 w-full">
-  <label for="exampleFormControlInput1" class="form-label">Multiplicador Extra</label>
-  <input type="number" class="form-control" id="exampleFormControlInpu21" placeholder="Ingrese el multiplicador">
-</div>
-</section>
-<div class="mb-10">
-<button type="button" class="btn" style="background-color: #9333ea !important; color: white;">Guardar</button>  
-</div>
-</div>  
 </section>
